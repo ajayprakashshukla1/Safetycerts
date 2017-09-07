@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600");
+body {
+    background: #fff;
+    font-weight: 500;
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: #3f454d;
+}
+.header .top{
+    margin-bottom: 35px;
+}
+.header{
+    background-color: #267cea;
+    color: white;
+    padding: 70px 0 50px;
+}
+.header .logo img{
+    width: 250px;
+}
+.header h1{
+    font-weight: 300;
+}
+.header .helpline{text-align: right;font-size: 1.24em;font-weight: 600;}
+.progress-bar{
+    background-color:#0627a0;
+}
+.progress{
+    height:10px;
+    background-color:white;
+}
+.progress-wrap p{
+    margin: 17px 0 2px 0;
+    font-size: 1.165em;
+    text-transform: uppercase;
+}
+.left_label_wrap{
+    margin-top:15px;
+}
+.left_label{
+    font-weight: normal;
+}
+.left_label_wrap label, .left_label_wrap input {
+    width: 49%;
+    display: inline-block;
+}
+.left_label_wrap label{
+    text-align: right;
+    padding-right:10px;
+}
+.form-group label:not(.btn):not(.left_label):not(.right_label), .form-group .label{
+    display: block;
+    padding:7px 0;
+    font-weight: 600;
+    margin: 0;
+    line-height: 100%;
+    font-size: 1.2em;
+}
+.btn{
+    margin-top: 15px;
+    min-height: 1px;
+    padding: 10px 5px;
+    border-radius: 3px;
+    border-color: #267cea;
+    color: #3f454d;
+    position: relative;
+    background: #fff;
+    box-shadow: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    outline: none!important;
+    background: no-repeat 91% 49%;
+}
+.btn:hover{
+    background-color: rgba(38, 124, 234, 0.05);
+}
+.btn_radio{
+    display:flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.btn_radio .btn{
+    width: 40%;
+}
+.btn_radio .btn.active, .btn.upload{
+    background: #267cea;
+    color: #fff;
+    box-shadow: none;
+}
+.upload.btn{
+    max-width: 203px;
+}
+.btn p{
+    font-size: 1.1em;
+    font-weight: 300 !important;
+    line-height:120%;
+    display: block;
+    margin: auto;
+}
+.btn_radio .btn:after{
+    content: '';
+    display: block;
+    width: 15px;
+    height: 20px;
+    right: 15px;
+    top: 8px;
+    position: absolute;
+    background: url(../img/white-tick.png) no-repeat center;
+    opacity:0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.btn.upload{
+    padding: 10px 25px 10px 40px;
+    border: none;
+    background: url(../img/ulpoad.png) no-repeat 20px center #267cea;
+}
+.btn_radio .btn.active:after{
+    opacity:1
+}
+.col-sm-5 .btn{
+    width: 45%;
+}
+label span{
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #909090;
+    font-weight: 400;
+}
+#uploaded_file{
+    top: 8px;
+    left: 10px;
+    position: relative;
+}
+.action-buttons ul{
+    margin:0;
+    padding:0;
+}
+.action-buttons{
+    padding:79px 0;
+}
+.action-buttons .btn{
+    width: 161px;
+    display: inline-block;
+    box-shadow: none;
+    border-radius: 6px;
+    background: #00377d;
+    color: #fff;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    padding: 17px 5px;
+    border-color: #00377d;
+}
+.action-buttons .btn:hover, .action-buttons .btn:focus, .action-buttons .btn:active {
+    background-color:#267CEA;
+    border-color:#267CEA;
+}
+.action-buttons .next{
+    float: right;
+}
+.action-buttons .previous{
+    float: left;
+}
+sup{
+    color: #fc4551;
+}
+input[type="number"]{
+    text-align: center;
+}
+.select_wrap{
+    display:flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.select_wrap_item{
+    width: 100%;
+}
+.sel_3 .select_wrap_item{
+    width: 28%;
+}
+.sel_3 .select_wrap_item:nth-child(2){
+    width: 40%;
+}
+.gray-header {
+    background: #f2f5f7;
+}
+.gray-header .container {
+    padding-top: 47px;
+    position: relative;
+    padding-bottom: 49px;
+}
+.gray-header .container:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 17px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: #fff;
+}
+.gray-header p {
+    position: relative;
+    line-height: 100%;
+    margin: 0;
+    font-size: 1.48em;
+    padding: 0;
+}
+.form-control{
+    height:40px;
+    border-color: #7d8a99;
+}
+.form-area {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.btn.select_btn{
+    margin-top: 0;
+    width: 100%;
+    height:40px;
+    position: relative;
+    text-align: left;
+    z-index:100;
+    padding-left: 17px;
+    border-color: #7d8a99;
+}
+.btn.select_btn:hover, .open .btn.select_btn{
+    background:#e6e6e6;
+}
+.btn.select_btn:after{
+    content:"";
+    display:block;
+    width: 12px;
+    height: 6px;
+    background: url(../img/caret.png) no-repeat;
+    right: 10px;
+    position: absolute;
+    top: 17px;
+}
+ul.options_list{
+    display: none;
+    list-style-type: none;
+    margin: 5px 0;
+    padding: 0;
+    position: absolute;
+    z-index: 1000;
+    float: left;
+    width:100%;
+    overflow-x: hidden;
+    max-height: 270px;
+    font-size: 14px;
+    text-align: left;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+ul.options_list li{
+    padding:2px 18px;
+}
+ul.options_list li:hover{
+    background-color: #f5f5f5;
+}
+/*select{*/
+/*display: none!important;*/
+/*}*/
+.col-sm-4{
+    min-height: 70px;
+}
+.checkbox input[type="checkbox"], input[type="file"],input[type="radio"],select.form-control, .btn.previous, .inner_page_wrap:not(:first-child){
+    display: none;
+}
+.checkbox label{
+    position: relative;
+    padding-left:25px;
+}
+.checkbox label.active:after{
+    opacity:1;
+    border-color: #267cea;
+}
+.checkbox label:after{
+    opacity:0;
+    background: url(../img/checkbox-active.png) no-repeat center;
+}
+.checkbox label:before,.checkbox label:after{
+    content: '';
+    top: 2px;
+    left: 0;
+    position: absolute;
+    display: inline-block;
+    outline: 0;
+    width: 17px;
+    height: 17px;
+    border-radius: 3px;
+    border: 1px solid #7d8a99;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+label a{
+    color: #267cea;
+}
+footer{
+    background: #267cea;
+    padding-top: 27px;
+    padding-bottom: 11px;
+    color: #fff;
+    text-align: center;
+}
+.parsley-errors-list{
+    position:absolute;
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    color: #fc4551;
+}
+.parsley-error{
+    border-color: #fc4551;
+    z-index: 2;
+    position: relative;
+    background: transparent;
+}
+.parsley-error:focus{
+    border-color:#ff9299
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    display: none;
+}
+.thanks{
+    text-align: center;
+    margin-top: calc(50vh - 60px);
+}
+@media (max-width: 768px) {
+    .action-buttons {
+        padding: 0 0 30px;
+    }
+    .left_label_wrap input{
+        width: 45%;
+        float: right;
+        margin-top: 5px;
+    }
+    .left_label_wrap label{
+        margin-top: 15px;
+        width:45%;
+        padding-right:0;
+    }
+}
+@media (max-width: 600px) {
+    .header .logo,.header .helpline{
+        text-align: center;
+    }
+    .header {
+        padding: 20px 0;
+    }
+    .header .helpline{
+        padding-top:20px;
+    }
+    .left_label_wrap input{
+        width: 45%;
+    }
+    label span{
+        display:block;
+    }
+    .form-group{
+        margin-bottom:0;
+    }
+    .form-group label, span.label{
+        margin-top: 15px!important;
+    }
+    .checkbox{
+        margin-bottom:0;
+    }
+    .sel_3 .select_wrap_item:nth-child(2){
+        width: 41%;
+    }
+    label.btn, label.right_label{
+        margin-top: 0!important;
+    }
+    .left_label_wrap{
+        margin-top:5px;
+    }
+
+}

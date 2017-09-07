@@ -1,0 +1,1 @@
+<!--<button style="float: right;padding: 5px 10px;" type="button" value="Stop Camera" stop-v="2" class="btn btn-primary dev-stop-camera">Block Camera </button>->

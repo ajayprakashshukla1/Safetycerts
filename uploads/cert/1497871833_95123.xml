@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+  "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+  "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+    <!-- ========== Form Beans===================================
+        Most form beans are DynaValidator beans, but sometimes we use a sub class that extends the
+        DynaValidator beans. In those cases, the form beans are coupled to Model objects used for
+        updating/manipulating the API.
+    -->
+    <form-beans>
+        <!-- The Index Page Login Form -->
+        <form-bean name="loginFormData" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="userName" type="java.lang.String"/>
+            <form-property name="password" type="java.lang.String"/>
+            <form-property name="rememberMe" type="java.lang.Boolean"/>
+        </form-bean>
+
+        <!-- Forgot password -->
+        <form-bean name="forgotFormData" type="org.apache.struts.validator.DynaValidatorForm">
+            <form-property name="userName" type="java.lang.String"/>
+        </form-bean>
+
+        <!-- The Pipeline Page Form -->
+        <form-bean name="accountFormData" type="Base.Page.Account.AccountForm">
+            <form-property name="dealList" type="java.util.ArrayList"/>
+            <form-property name="choosenDeal" type="java.lang.String"/>
+            <form-property name="valid" type="java.lang.Boolean"/>
+        </form-bean>
+
+        <!-- The Menu Page Form. This is really used to pass values into the view... -->
+        <form-bean name="menuFormData" type="Base.Page.Menu.MenuForm">
+            <form-property name="userName" type="java.lang.String"/>
+            <form-property name="type" type="java.lang.String"/>
+            <form-property name="valid" type="java.lang.Boolean"/>
+        </form-bean>
+
+        <!-- New Broker Sign Up -->
+        <form-bean name="newUserFormData" type="Base.Page.User.NewUserForm">
+            <form-property name="firstName" type="java.lang.String"/>
+            <form-property name="lastName" type="java.lang.String"/>
+            <form-property name="middleName" type="java.lang.String"/>
+            <form-property name="ssn" type="java.lang.String"/>
+            <form-property name="tin" type="java.lang.String"/>
+
+            <form-property name="email" type="java.lang.String"/>
+            <form-property name="password" type="java.lang.String"/>
+            <form-property name="passwordTest" type="java.lang.String"/>
+
+            <form-property name="workPhone" type="java.lang.String"/>
+            <form-property name="homePhone" type="java.lang.String"/>
+            <form-property name="mobilePhone" type="java.lang.String"/>
+            <form-property name="fax" type="java.lang.String"/>
+
+            <form-property name="street" type="java.lang.String"/>
+            <form-property name="city" type="java.lang.String"/>
+            <form-property name="state" type="java.lang.String"/>
+            <form-property name="zip" type="java.lang.String"/>
+
+            <form-property name="statelist" type="java.util.ArrayList"/>
+            <form-property name="lolist" type="java.util.TreeMap"/>
+            <form-property name="loPick" type="java.lang.String"/>
+
+            <form-property name="repName" type="java.lang.String"/>
+            <form-property name="profession" type="java.lang.String"/>
+            <form-property name="professionList" type="java.util.ArrayList"/>
+            <form-property name="companyName" type="java.lang.String"/>
+        </form-bean>
+
+        <!-- Update My Account Page -->
+        <form-bean name="userFormData" type="Base.Page.User.UserForm">
+            <form-property name="type" type="java.lang.String"/>
+            <form-property name="valid" type="java.lang.Boolean"/>
+
+            <form-property name="firstName" type="java.lang.String"/>
+            <form-property name="lastName" type="java.lang.String"/>
+            <form-property name="middleName" type="java.lang.String"/>
+            <form-property name="ssn" type="java.lang.String"/>
+            <form-property name="tin" type="java.lang.String"/>
+
+            <form-property name="email" type="java.lang.String"/>
+            <form-property name="password" type="java.lang.String"/>
+            <form-property name="passwordTest" type="java.lang.String"/>
+
+            <form-property name="workPhone" type="java.lang.String"/>
+            <form-property name="homePhone" type="java.lang.String"/>
+            <form-property name="mobilePhone" type="java.lang.String"/>
+            <form-property name="fax" type="java.lang.String"/>
+
+            <form-property name="street" type="java.lang.String"/>
+            <form-property name="city" type="java.lang.String"/>
+            <form-property name="state" type="java.lang.String"/>
+            <form-property name="zip" type="java.lang.String"/>
+
+            <form-property name="statelist" type="java.util.ArrayList"/>
+            <form-property name="lolist" type="java.util.TreeMap"/>
+            <form-property name="loPick" type="java.lang.String"/>
+
+            <form-property name="repName" type="java.lang.String"/>
+            <form-property name="profession" type="java.lang.String"/>
+            <form-property name="professionList" type="java.util.ArrayList"/>
+            <form-property name="companyName" type="java.lang.String"/>
+        </form-bean>
+
+        <!-- Create and View Deal Page -->
+        <form-bean name="dealFormData" type="Base.Page.Deal.DealForm">
+            <form-property name="statelist" type="java.util.ArrayList"/>
+
+            <form-property name="corpCheck" type="java.lang.Boolean"/>
+            <form-property name="isCorporate" type="java.lang.String"/>
+            <form-property name="corporateName" type="java.lang.String"/>
+
+            <form-property name="firstName" type="java.lang.String"/>
+            <form-property name="lastName" type="java.lang.String"/>
+            <form-property name="middleName" type="java.lang.String"/>
+            <form-property name="ssn" type="java.lang.String"/>
+            <form-property name="cbFirstName" type="java.lang.String"/>
+            <form-property name="cbLastName" type="java.lang.String"/>
+            <form-property name="cbMiddleName" type="java.lang.String"/>
+            <form-property name="cbssn" type="java.lang.String"/>
+            <form-property name="currentAddress" type="java.lang.String"/>
+            <form-property name="currentCity" type="java.lang.String"/>
+            <form-property name="signor" type="java.lang.String"/>
+
+            <form-property name="lo" type="java.lang.String"/>
+            <form-property name="lolist" type="java.util.TreeMap"/>
+
+            <form-property name="loanType" type="java.lang.String"/>
+            <form-property name="loanTypeList" type="java.util.ArrayList"/>
+
+            <form-property name="acctExec" type="java.lang.String"/>
+            <form-property name="acctExecList" type="java.util.TreeMap"/>
+
+            <form-property name="currentState" type="java.lang.String"/>
+            <form-property name="currentZip" type="java.lang.String"/>
+            <form-property name="emailAddress" type="java.lang.String"/>
+            <form-property name="cell" type="java.lang.String"/>
+            <form-property name="work" type="java.lang.String"/>
+            <form-property name="home" type="java.lang.String"/>
+
+            <form-property name="prAddress" type="java.lang.String"/>
+            <form-property name="prCity" type="java.lang.String"/>
+            <form-property name="prState" type="java.lang.String"/>
+
+            <form-property name="prZip" type="java.lang.String"/>
+            <form-property name="prCounty" type="java.lang.String"/>
+
+            <form-property name="subdivsion" type="java.lang.String"/>
+
+            <form-property name="propType" type="java.lang.String"/>
+            <form-property name="propList" type="java.util.ArrayList"/>
+
+            <form-property name="buildingType" type="java.lang.String"/>
+            <form-property name="bldList" type="java.util.ArrayList"/>
+
+            <form-property name="sqFeet" type="java.lang.String"/>
+            <form-property name="stories" type="java.lang.String"/>
+            <form-property name="bedrooms" type="java.lang.String"/>
+            <form-property name="fullBaths" type="java.lang.String"/>
+            <form-property name="halfBaths" type="java.lang.String"/>
+
+            <form-property name="air" type="java.lang.Boolean"/>
+            <form-property name="basement" type="java.lang.Boolean"/>
+            <form-property name="finished" type="java.lang.Boolean"/>
+            <form-property name="wellseptic" type="java.lang.Boolean"/>
+            <form-property name="publicwatersewer" type="java.lang.Boolean"/>
+            <form-property name="lotsize" type="java.lang.String"/>
+            <form-property name="zoning" type="java.lang.String"/>
+
+            <form-property name="description" type="java.lang.String"/>
+            <form-property name="synopsis" type="java.lang.String"/>
+            <form-property name="renovations" type="java.lang.String"/>
+            <form-property name="payoff" type="java.lang.String"/>
+
+            <form-property name="purchasePrice" type="java.lang.String"/>
+            <form-property name="closingCosts" type="java.lang.String"/>
+            <form-property name="rennovationCosts" type="java.lang.String"/>
+            <form-property name="constructionCosts" type="java.lang.String"/>
+            <form-property name="totalRequested" type="java.lang.String"/>
+            <form-property name="resaleValue" type="java.lang.String"/>
+            <form-property name="settlementDate" type="java.lang.String"/>
+
+            <form-property name="settleAgency" type="java.lang.String"/>
+            <form-property name="stlList" type="java.util.ArrayList"/>
+
+            <form-property name="settleCompany" type="java.lang.String"/>
+            <form-property name="settleContact" type="java.lang.String"/>
+            <form-property name="settleAddress" type="java.lang.String"/>
+            <form-property name="settleCity" type="java.lang.String"/>
+            <form-property name="settleState" type="java.lang.String"/>
+            <form-property name="settleZip" type="java.lang.String"/>
+            <form-property name="settlePhone" type="java.lang.String"/>
+            <form-property name="settleFax" type="java.lang.String"/>
+
+            <form-property name="Sales_Price__c" type="java.lang.String"/>
+            <form-property name="Loan_Discount_CLC__c" type="java.lang.String"/>
+            <form-property name="Misc_Acq_Closing_Costs__c" type="java.lang.String"/>
+            <form-property name="Cost_of_Repairs__c" type="java.lang.String"/>
+            <form-property name="Interest_Field__c" type="java.lang.String"/>
+            <form-property name="Sales_Commission__c" type="java.lang.String"/>
+            <form-property name="Selling_Closing_Costs__c" type="java.lang.String"/>
+            <form-property name="Total_Costs__c" type="java.lang.String"/>
+            <form-property name="Net_Profit_Field__c" type="java.lang.String"/>
+            <form-property name="Net_Profit__c" type="java.lang.String"/>
+        </form-bean>
+
+    </form-beans>
+
+    <!-- ========== Action Mapping Definitions ============================== -->
+    <!-- ========== Exception Stuff ===================================
+        Tossing exceptions is better than some befuddled error display schema!
+        Basically, you toss exception in the Handler configure here that exception is legit
+        and it takes you back, with the error in the ActionErrors. Let Struts deal with this BS.
+    -->
+    <action-mappings>
+        <!-- The login form -->
+        <action
+            input="/forgot.jsp"
+            path="/forgot"
+            type="Base.Page.Login.ForgotFormHandler"
+            name="forgotFormData"
+            validate="true"
+            scope="request">
+            <forward name="Pass" path="/index.jsp" redirect="false" />
+        </action>
+
+        <!-- The login form -->
+        <action
+            input="/index.jsp"
+            path="/login"
+            type="Base.Page.Login.LoginFormHandler"
+            name="loginFormData"
+            validate="true"
+            scope="request">
+            <exception key="login.invalidUser" type="Base.Utility.Exceptions.LoginInvalidException" />
+            <exception key="connection.error" type="Base.Utility.Exceptions.BaseConnectException" />
+            <forward name="Fail" path="/index.jsp" redirect="false" />
+            <forward name="Pass" path="/pipeline.jsp" redirect="false" />
+        </action>
+
+        <!-- My Account page -->
+        <action
+            input="/updateuser.jsp"
+            path="/updateUser"
+            type="Base.Page.User.UserFormHandler"
+            name="userFormData"
+            validate="true"
+            scope="request">
+            <exception key="connection.error" type="Base.Utility.Exceptions.BaseConnectException" />
+            <exception key="username.invalid" type="Base.Utility.Exceptions.UsernameException" />
+            <forward name="Fail" path="/updateuser.jsp" redirect="false" />
+            <forward name="Pass" path="/pipeline.jsp" redirect="false" />
+        </action>
+
+        <!-- Create new broker -->
+        <action
+            input="/broker.jsp"
+            path="/newUser"
+            type="Base.Page.User.NewUserFormHandler"
+            name="newUserFormData"
+            validate="true"
+            scope="request">
+            <exception key="connection.error" type="Base.Utility.Exceptions.BaseConnectException" />
+            <exception key="username.invalid" type="Base.Utility.Exceptions.UsernameException" />
+            <forward name="Fail" path="/broker.jsp" redirect="false" />
+            <forward name="Pass" path="/thankyou.jsp" redirect="false" />
+        </action>
+
+        <!-- Pipline page -->
+        <action
+            path="/account"
+            name="accountFormData"
+            scope="request"
+            input="/pipeline.jsp"
+            type="Base.Page.Account.AccountFormHandler"
+            validate="true">
+            <exception key="connection.error" type="Base.Utility.Exceptions.BaseConnectException" />
+            <forward name="Fail" path="/pipeline.jsp" redirect="false" />
+            <forward name="Pass" path="/viewdeal.jsp" redirect="false" />
+        </action>
+
+        <!-- Create Deal page -->
+        <action
+            path="/deal"
+            name="dealFormData"
+            scope="request"
+            input="/createdeal.jsp"
+            type="Base.Page.Deal.DealFormHandler"
+            validate="true">
+            <exception key="connection.error" type="Base.Utility.Exceptions.BaseConnectException" />
+            <forward name="Fail" path="/createdeal.jsp" redirect="false" />
+            <forward name="Pass" path="/pipeline.jsp" redirect="false" />
+        </action>
+
+        <!-- Create Deal page -->
+        <action
+            path="/retailDeal"
+            name="dealFormData"
+            scope="request"
+            input="/forms_loan.jsp"
+            type="Base.Page.Deal.DealFormHandler"
+            validate="true">
+            <exception key="connection.error" type="Base.Utility.Exceptions.BaseConnectException" />
+            <forward name="Fail" path="/forms_loan.jsp" redirect="false" />
+            <forward name="Pass" path="/retailthankyou.jsp" redirect="false" />
+        </action>
+
+        <action
+            path="/preRetail"
+            type="Base.Page.Login.LogoutHandler"
+            scope="request">
+            <forward name="Pass" path="/forms_loan.jsp" redirect="false" />
+        </action>
+
+        <!-- Menu Form doesn't actually do anything, it's just for shuffling data to view -->
+        <action
+            path="/menu"
+            name="menuFormData"
+            scope="request">
+        </action>
+
+        <!-- Logout action isn't a form, rather just a session invalidation action -->
+        <action
+            path="/logout"
+            type="Base.Page.Login.LogoutHandler"
+            scope="request">
+            <forward name="Pass" path="/index.jsp" redirect="false" />
+        </action>
+    </action-mappings>
+
+    <!-- The properties file that contains messages, etc. -->
+    <message-resources parameter="MessageResources"/>
+
+    <!-- Plugin stuff for the validation portion -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+    
+</struts-config>
